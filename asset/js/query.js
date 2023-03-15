@@ -1,4 +1,4 @@
-var mysql = require('mysql2');
+var mysql = require('mysql');
 
 var con = mysql.createConnection({
     host: "aws-iot-station.czzjjyc4w6bz.ap-northeast-1.rds.amazonaws.com",
