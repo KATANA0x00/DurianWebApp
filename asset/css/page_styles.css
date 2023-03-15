@@ -1,0 +1,112 @@
+@import url('/asset/css/page_styles.css');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    font-family: Kanit;
+    transition: 0.5s;
+}
+
+.auto-fill:-webkit-autofill,
+.auto-fill:hover, 
+.auto-fill:focus {
+    -webkit-text-fill-color: var(--text);
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-color) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+html ,body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    align-items: center;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    padding: 0;
+    margin: auto;
+    max-width: 500px;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.list .home-button {
+    min-width: 250px;
+    font-size: 40px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    margin-top: 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.list button {
+    min-width: 100px;
+    font-size: 25px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.list button:hover {
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+.list li {
+    margin-top: 30px;
+}
+.list li label {
+    color: var(--text);
+}
+.list li input[type=text] {
+    width: 87%;
+    font-size: 20px;
+    color: var(--text);
+    background-color: var(--bg-color);
+    border: 2px solid var(--primary);
+    border-radius: 30px;
+    padding: 10px;
+    outline: none;
+    transition: 0.5s;
+}
+.list li input[type=text]:hover {
+    border-radius: 10px;
+}
+.list li input[type=text]:focus {
+    border-radius: 10px;
+}
+.list li input[type=submit] {
+    min-width: 120px;
+    font-size: 25px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+.list li input[type=submit]:hover {
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+.display-text {
+    font-size: 30px;
+}
+

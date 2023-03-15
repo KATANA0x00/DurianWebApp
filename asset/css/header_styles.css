@@ -1,0 +1,114 @@
+:root {
+    --bg-color: #17182c;
+    --primary: #ff8800;
+    --secondary: #ffaf53;
+    --text: white;
+    --theme-icon: url(/asset/img/moon-svgrepo-com.svg);
+}
+
+:root:has(#theme-check:checked) {
+    transition: linear 0.5s;
+    --bg-color: white;
+    --primary: #ff8800;
+    --secondary: #ffaf53;
+    --text: black;
+    --theme-icon: url(/asset/img/sun-svgrepo-com.svg);
+}
+
+.theme-icon{
+    width: 34px;
+    margin-right: 10px;
+    content: var(--theme-icon);
+    filter: var(--filter);
+}
+
+.Header {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    max-height: 100px;
+    width: 100%;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 80px;
+}
+
+.nav-link {
+    padding: 12px;
+}
+
+.nav-link li {
+    display: inline-block;
+    margin: 0 20;
+}
+
+.nav-link li a {
+    padding: 10px 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.nav-link li a:hover {
+    background-color: var(--secondary);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: white;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
+}

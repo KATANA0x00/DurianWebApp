@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/asset/css/page_styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+        });
+    </script>
+
+    <title>Register</title>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <ul class="list">
+            <li><a href="index.html"><button>กลับ</button></a></li>
+
+            <form action="submit.php" method="post">
+
+            <li><label>ชื่อสวน</label></li>
+            <li style="margin-top: 15px;"><input type="text" name="locations" id="locations" class="auto-fill" placeholder="ชื่อสวน"></li>
+            <li><label>สายพันธุ์</label></li>
+            <li style="margin-top: 15px;"><input type="text" name="species" id="species" class="auto-fill" placeholder="สายพันธุ์"></li>
+            <li><label>วันที่เริ่มออกดอก</label></li>
+            <li style="display:flex;flex-direction: row;width:90%;justify-content: space-between;margin-top: 15px;">
+                <input type="text" name="date" id="date" class="auto-fill" style="width:22%;" placeholder="วัน  ( 1-31 )">
+                <input type="text" name="month" id="month" class="auto-fill" style="width:35%;" placeholder="เดือน  ( 1-12 )">
+                <input type="text" name="years" id="years" class="auto-fill" style="width:22%;" placeholder="ปี  ค.ศ.">
+            </li>
+            <br>
+            <li><input type="submit" value="ลงทะเบียน"></li>
+            </form>
+        </ul>
+    </div>
+</body>
+</html>
